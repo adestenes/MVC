@@ -1,0 +1,18 @@
+// Models/TravelModel.cs
+namespace YourNamespace.Models
+{
+    public class TravelModel
+    {
+        public double Distance { get; set; }
+        public double Duration { get; set; }
+
+        public double CalculateAverageSpeed()
+        {
+            if (Duration > 0)
+            {
+                return Distance / (Duration / 60); // duração em horas
+            }
+            return 0;
+        }
+    }
+}
